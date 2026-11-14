@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">나예 D-day</string>
+    <string name="widget_name">나예 D-day</string>
+    <string name="widget_description">이름과 기념일만 표시하는 미니 위젯</string>
+</resources>

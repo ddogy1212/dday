@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.widget.RemoteViews;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -54,6 +55,11 @@ public class DDayWidget extends AppWidgetProvider {
             views.setOnClickPendingIntent(R.id.dday_text, pi);
             m.updateAppWidget(id, views);
         }
+    }
+
+    @Override public void onAppWidgetOptionsChanged(Context context, AppWidgetManager manager, int id, Bundle options) {
+        super.onAppWidgetOptionsChanged(context, manager, id, options);
+        refresh(context);
     }
 
     @Override public void onUpdate(Context context, AppWidgetManager manager, int[] ids) {
